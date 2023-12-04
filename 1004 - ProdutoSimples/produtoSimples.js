@@ -1,6 +1,6 @@
 const { readFile } = require("fs").promises;
 
-const INPUT_FILES = process.argv[2] || "/dev/stdin";
+const INPUT_FILE = process.argv[2] || "/dev/stdin";
 
 async function main() {
   try {
@@ -11,7 +11,7 @@ async function main() {
 
     if (isNaN(A) || isNaN(B)) {
       throw new Error(
-        "Erro: Valor de entrada inválido. Por favor verifique os valores atribuídos a A e B."
+        "Error: Invalid input value. Please check the values assigned to A and B."
       );
     }
 
@@ -20,11 +20,9 @@ async function main() {
     console.log(`PROD = ${product}`);
   } catch (error) {
     if (error.code === "ENOENT") {
-      console.error(`Erro: O arquivo ${INPUT_FILES} não pode ser encontrado.`);
+      console.error(`Error: The file ${INPUT_FILE} could not be found.`);
     } else {
-      console.error(
-        `Erro ao processar o arquivo ${INPUT_FILES}: ${error.message}`
-      );
+      console.error(`Error processing file ${INPUT_FILE}: ${error.message}`);
     }
   }
 }

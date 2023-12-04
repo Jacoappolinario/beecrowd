@@ -10,7 +10,7 @@ async function main() {
 
     if (isNaN(radius) || radius < 0) {
       throw new Error(
-        "Erro: Valor de entrada inválido. Por favor, verifique se o valor atribuído ao raio é numérico, maior que zero e do tipo ponto flutuante."
+        "Error: Invalid input value. Please check that the value assigned to the radius is numeric, greater than zero and of floating point type."
       );
     }
 
@@ -19,11 +19,9 @@ async function main() {
     console.log(`A=${area.toFixed(4)}`);
   } catch (error) {
     if (error.code === "ENOENT") {
-      console.error(`Erro: O arquivo ${INPUT_FILE} não pode ser encontrado.`);
+      console.error(`Error: The file ${INPUT_FILE} could not be found.`);
     } else {
-      console.error(
-        `Erro ao processar o arquivo ${INPUT_FILE}: ${error.message}`
-      );
+      console.error(`Error processing file ${INPUT_FILE}: ${error.message}`);
     }
   }
 }

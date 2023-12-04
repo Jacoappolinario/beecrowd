@@ -10,7 +10,7 @@ async function main() {
 
     if (isNaN(A) || isNaN(B)) {
       throw new Error(
-        "Erro: Valor de entrada inválido. Por favor verifique os valores atribuídos a A e B."
+        "Error: Invalid input value. Please check the values assigned to A and B."
       );
     }
 
@@ -19,11 +19,9 @@ async function main() {
     console.log(`SOMA = ${sum}`);
   } catch (error) {
     if (error.code === "ENOENT") {
-      console.error(`Erro: O arquivo ${INPUT_FILE} não pode ser encontrado.`);
+      console.error(`Error: The file ${INPUT_FILE} could not be found.`);
     } else {
-      console.error(
-        `Erro ao processar o arquivo ${INPUT_FILE}: ${error.message}`
-      );
+      console.error(`Error processing file ${INPUT_FILE}: ${error.message}`);
     }
   }
 }

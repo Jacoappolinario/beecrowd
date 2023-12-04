@@ -9,7 +9,7 @@ async function main() {
 
     if (isNaN(A) || isNaN(B)) {
       throw new Error(
-        "Erro: Valores de entrada inválidos. Certifique-se de que os valores de A e B sejam números inteiros."
+        "Error: Invalid input values. Make sure that the values of A and B are integers."
       );
     }
 
@@ -18,11 +18,9 @@ async function main() {
     console.log(`X = ${X}`);
   } catch (error) {
     if (error.code === "ENOENT") {
-      console.error(`Erro: O arquivo ${INPUT_FILE} não pode ser encontrado.`);
+      console.error(`Error: The file ${INPUT_FILE} could not be found.`);
     } else {
-      console.error(
-        `Erro ao processar o arquivo ${INPUT_FILE}: ${error.message}`
-      );
+      console.error(`Error processing file ${INPUT_FILE}: ${error.message}`);
     }
   }
 }
