@@ -11,7 +11,7 @@ async function main() {
 
     if (inputContent.some(isNaN)) {
       throw new Error(
-        `Error: Invalid input value. Please check the values assigned to A, B, C and D`
+        `Error: Invalid input value. Please check the input values.`
       );
     }
 
