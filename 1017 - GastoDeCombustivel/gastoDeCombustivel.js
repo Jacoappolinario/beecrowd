@@ -17,7 +17,7 @@ async function main() {
 
     if (inputContent.length !== 2) {
       throw new Error(
-        ` Erro: O arquivo de entrada não contém os dados esperados.`
+        `Erro: O arquivo de entrada não contém os dados esperados.`
       );
     }
 
