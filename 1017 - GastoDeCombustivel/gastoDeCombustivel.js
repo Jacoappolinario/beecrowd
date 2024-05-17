@@ -2,7 +2,7 @@ const { readFile } = require("fs").promises;
 
 const INPUT_FILE = process.argv[2] || "/dev/stdin"; // Constante representando o caminho do arquivo de entrada. Se nenhum caminho for fornecido como argumento na linha de comando, "/dev/stdin" será utilizado.
 
-const KM_PER_LITER = 12; // // Constante representando a quantidade média de quilômetros percorridos por litro de combustível.
+const KM_PER_LITER = 12; // Constante representando a quantidade média de quilômetros percorridos por litro de combustível.
 
 function calculateFuelQuantity(travelTime, averageSpeed) {
   return ((travelTime * averageSpeed) / KM_PER_LITER).toFixed(3);
