@@ -14,12 +14,11 @@ function calculateNotes(totalAmount, noteValue) {
 async function main() {
   try {
     const inputContent = (await readFile(INPUT_FILE, "utf-8")).trim();
+    let totalAmount = parseInt(inputContent);
 
-    if (!inputContent || isNaN(inputContent)) {
+    if (!totalAmount) {
       throw new Error(`Erro: O arquivo de entrada não contém o dado esperado.`);
     }
-
-    let totalAmount = parseInt(inputContent);
 
     console.log(totalAmount);
 
